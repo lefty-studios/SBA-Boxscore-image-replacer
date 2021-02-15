@@ -1,6 +1,15 @@
 import os
+import tkinter as tk
+from tkinter import filedialog
 
-directory = r'C:\Users\user\Documents\SBA\Boxes'
+root = tk.Tk()
+root.withdraw()
+
+#directory = r'C:\Users\user\Documents\SBA\Boxes'
+print("Please select the folder that has the boxscores.")
+from tkinter.filedialog import askdirectory
+directory = askdirectory(title='Select Folder') 
+
 for filename in os.listdir(directory):
     if filename.endswith(".htm"):
         with open(os.path.join(directory, filename), 'r') as file:
