@@ -1,6 +1,6 @@
 import os
 
-directory = r'C:\Users\amhad\Documents\SBA\Boxes'
+directory = r'C:\Users\user\Documents\SBA\Boxes'
 for filename in os.listdir(directory):
     if filename.endswith(".htm"):
         with open(os.path.join(directory, filename), 'r') as file:
